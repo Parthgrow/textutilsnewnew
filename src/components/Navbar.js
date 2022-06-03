@@ -1,10 +1,13 @@
 import React from 'react'
+import { useState } from 'react';
 
 export default function Navbar(props) {
+
+    
     return (
         <>
 
-            <nav className="navbar navbar-expand-lg bg-light">
+            <nav className="navbar navbar-expand-lg bg-light" >
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">{props.title}</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,14 +21,19 @@ export default function Navbar(props) {
                             <li className="nav-item">
                                 <a className="nav-link" href="/">Link</a>
                             </li>
-                            
+
                             <li className="nav-item">
                                 <a className="nav-link disabled" href="/">Disabled</a>
                             </li>
                         </ul>
-                       
+
                     </div>
                 </div>
+                <div className="form-check form-switch">
+                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                    <label className="form-check-label" for="flexSwitchCheckDefault"></label>
+                </div>
+                
             </nav>
 
 
