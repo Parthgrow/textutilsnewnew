@@ -40,8 +40,12 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<TextForm/>}/>
-        <Route path="/about" element={<About/>}/>
+        <Route exact path="/" element={<TextForm/>}/>
+        
+        <Route exact path="/about" element={<About/>}/>
+
+        
+        
 
       </Routes>
     
