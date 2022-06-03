@@ -64,18 +64,21 @@ export default function TextForm(props) {
             <button type="button" className="btn btn-primary mx-3 " onClick={handleUpperCase}>UpperCase</button>
             <button type="button" className="btn btn-primary mx-3 " onClick={handleLowerCase}>LowerCase</button>
 
-            <div className="container" my-3 mx-3>
+            <div className="container my-3" >
                 <h2>Your Text Summary</h2>
-                <p> {text.length}</p>
-                <h2>Preview</h2>
-                {/* <p> No. of Words are : {text.spli(" ").length}
+                <p> No. of Words are : {text.split(" ").length} 
+                <br />
 
                     No. of Characters are: {text.length}
+                    <br />
 
                     Estimated Reading Time : {0.008 * text.split(" ").length}
 
-                </p> */}
-                {/* <p>{text}</p> */}
+                </p>
+                
+                <h2>Preview</h2>
+                
+                <p>{text}</p>
                 
             </div>
 

@@ -4,10 +4,12 @@ import { useState } from 'react';
 export default function Navbar(props) {
 
     
+
+    
     return (
         <>
 
-            <nav className="navbar navbar-expand-lg bg-light" >
+            <nav className= {` navbar navbar-expand-lg navbar-${props.modeNav} bg-${props.modeNav}` }>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">{props.title}</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,8 +31,8 @@ export default function Navbar(props) {
 
                     </div>
                 </div>
-                <div className="form-check form-switch">
-                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                <div className={`form-check form-switch text-${props.modeNav === 'light' ? 'dark':'light'}`}>
+                    <input className="form-check-input" type="checkbox" onClick={props.handleMode} role="switch" id="flexSwitchCheckDefault" />
                     <label className="form-check-label" for="flexSwitchCheckDefault"></label>
                 </div>
                 
